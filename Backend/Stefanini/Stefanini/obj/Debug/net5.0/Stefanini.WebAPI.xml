@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Stefanini.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Stefanini.WebAPI.Controllers.CidadesController.GetAll">
+            <summary>
+            Retorna todos lista de todas cidades, sem filtro
+            </summary>
+            <returns>Retorna lista de cidades</returns>
+            <response code="200">Retorna lista de cidades</response>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.CidadesController.GetAllFiltering(System.String)">
+            <summary>
+            Retornar lista de cidade filtrando pelo nome
+            </summary>
+            <returns>Retorna lista de cidades</returns>
+            <response code="200">Retorna lista de cidades</response>
+            <param filter="termo usado para filtrar"></param>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.CidadesController.Post(Application.Models.Cidades)">
+            <summary>
+            Cria uma nova cidade
+            </summary>
+            <returns></returns>
+            <response code="200"></response>
+            <param model="Objeto cidade (Id, Nome, UF)"></param>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.CidadesController.Put(Application.Models.Cidades)">
+            <summary>
+            Edita os dados da cidade ao passar o objeto do Cidade pelo Body
+            </summary>
+            <returns></returns>
+            <response code="200"></response>
+            <param model="Objeto cidade (Id, Nome, UF)"></param>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.CidadesController.Delete(System.Int64)">
+            <summary>
+            Remove uam cidade ao passar o ID
+            </summary>
+            <returns></returns>
+            <response code="200"></response>
+            <param id="id da cidade"></param>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.PessoasController.GetAll">
+            <summary>
+            Retorna todos lista de todas pessoas, sem filtro
+            </summary>
+            <returns>Retorna lista de pessoas</returns>
+            <response code="200">Retorna lista de pessoas</response>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.PessoasController.GetAllFiltering(System.String)">
+            <summary>
+            Retornar lista de Pessoa filtrando pelo nome
+            </summary>
+            <returns>Retorna lista de pessoas</returns>
+            <response code="200">Retorna lista de pessoas</response>
+            <param filter="termo usado para filtrar"></param>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.PessoasController.Post(Application.Models.Pessoas)">
+            <summary>
+            Cria uma nova Pessoa
+            </summary>
+            <returns></returns>
+            <response code="200"></response>
+            <param model="Objeto pessoa (Id, Nome, CPF, Idade, Id_Cidade)"></param>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.PessoasController.Put(Application.Models.Pessoas)">
+            <summary>
+            Edita os dados da pessoa ao passar o objeto do Pessoa pelo Body
+            </summary>
+            <returns></returns>
+            <response code="200"></response>
+            <param model="Objeto pessoa (Id, Nome, CPF, Idade, Id_Cidade)"></param>
+        </member>
+        <member name="M:Stefanini.WebAPI.Controllers.PessoasController.Delete(System.Int64)">
+            <summary>
+            Remove um pessoa ao passar o ID
+            </summary>
+            <returns></returns>
+            <response code="200"></response>
+            <param id="id da pessoa"></param>
+        </member>
+    </members>
+</doc>

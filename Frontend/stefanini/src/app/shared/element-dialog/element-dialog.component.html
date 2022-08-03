@@ -1,0 +1,29 @@
+<h1 *ngIf="!isChange" mat-dialog-title>Cadastrar pessoa</h1>
+<h1 *ngIf="isChange" mat-dialog-title>Editar pessoa</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="data.nome">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>CPF</mat-label>
+    <input matInput [(ngModel)]="data.cpf">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Idade</mat-label>
+    <input matInput [(ngModel)]="data.idade">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select
+    [(ngModel)]="data.id_cidade">
+         <mat-option *ngFor="let cidade of cidades" [value]="cidade.id">
+            {{ cidade.nome }}
+         </mat-option>
+      </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button *ngIf="!isChange" [mat-dialog-close]="data" cdkFocusInitial>Adicionar</button>
+  <button mat-button *ngIf="isChange" [mat-dialog-close]="data" cdkFocusInitial>Salvar</button>
+</div>
